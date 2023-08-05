@@ -1,0 +1,19 @@
+{
+    "base_configs": "kitti_base.json",
+    "loss": {
+        "w_smooth": 0
+     },
+    "model": {
+        "learned_upsampler": true
+    },
+    "train": {
+        "ot_classes": ["car", "pole", "sky"],
+        "ot_focus_new_occ": false,
+        "stage2": {
+            "epoch": 150,
+            "train": {
+                "run_ot": true
+            }
+        }
+    }
+}

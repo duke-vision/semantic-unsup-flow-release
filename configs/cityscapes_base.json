@@ -1,0 +1,110 @@
+{
+    "data": {
+        "at_cfg": {
+            "cj": true,
+            "cj_bri": 0.5,
+            "cj_con": 0.0,
+            "cj_hue": 0.0,
+            "cj_sat": 0.0,
+            "gamma": false,
+            "gblur": true
+        },
+        "data_aug": {
+            "crop": false,
+            "crop_bottom": 0.25,
+            "hflip": true,
+            "swap": true
+        },
+        "root_cityscapes": "data/Cityscapes/leftImg8bit_sequence/train",
+        "root_cityscapes_sem": "results/sdcnet/Cityscapes/train",
+        "root_kitti12": "data/KITTI-2012/training/",
+        "root_kitti12_sem": "results/sdcnet/KITTI-2012/training/",
+        "root_kitti15": "data/KITTI-2015/training/",
+        "root_kitti15_sem": "results/sdcnet/KITTI-2015/training/",
+        "run_at": true,
+        "test_shape": [256, 704],
+        "train_file": "datasets/cityscapes_train_2f_skip.txt",
+        "train_shape": [256, 704],
+        "type": "Cityscapes"
+    },
+    "loss": {
+        "edge_aware_alpha": 10,
+        "occ_from_back": true,
+        "smooth_2nd": true,
+        "type": "unflow",
+        "w_l1": 0.15,
+        "w_ph_scales": [1.0, 1.0, 1.0, 1.0, 0.0],
+        "w_sm_scales": [1.0, 0.0, 0.0, 0.0, 0.0], 
+        "w_smooth": 75.0,
+        "w_ssim": 0.85,
+        "w_ternary": 0.0,
+        "warp_pad": "border",
+        "with_bk": true
+    },
+    "model": {
+        "reduce_dense": true,
+        "type": "pwclite",
+        "upsample": true,
+        "sem_enc_layers": null
+    },
+    "seed": 0,
+    "train": {
+        "ar_eps": 0.0,
+        "ar_q": 1.0,
+        "batch_size": 4,
+        "beta": 0.999,
+        "bias_decay": 0,
+        "epoch_num": 200,
+        "epoch_size": 1000,
+        "lr": 0.0002,
+        "lr_scheduler": {
+            "module": "OneCycleLR",
+            "params": {
+                "max_lr": 0.0004, 
+                "pct_start": 0.05,
+                "cycle_momentum": false,
+                "anneal_strategy": "linear"
+            }
+        },
+        "mask_st": true,
+        "max_grad_norm": 10,
+        "momentum": 0.9,
+        "n_gpu": 2,
+        "optim": "adam",
+        "pretrained_model": null,
+        "print_freq": 100,
+        "record_freq": 500,
+        "run_atst": false,
+        "run_ot": false,
+        "run_st": false,
+        "save_iter": 10000,
+        "st_cfg": {
+            "add_noise": true,
+            "hflip": true,
+            "rotate": [-0.01, 0.01, -0.01, 0.01],
+            "squeeze": [1.0, 1.0, 1.0, 1.0],
+            "trans": [0.04, 0.005],
+            "vflip": false,
+            "zoom": [1.0, 1.4, 0.99, 1.01]
+        },
+        "stage1": {
+            "epoch": 50,
+            "loss": {
+                "occ_from_back": false,
+                "w_l1": 0.0,
+                "w_ssim": 0.0,
+                "w_ternary": 1.0
+            },
+            "train": {
+                "run_atst": true,
+                "run_st": true
+            }
+        },
+        "val_epoch_size": 5,
+        "valid_size": 0,
+        "w_ar": 0.02,
+        "weight_decay": 1e-06,
+        "workers": 8
+    },
+    "trainer": "KITTI_AR"
+}

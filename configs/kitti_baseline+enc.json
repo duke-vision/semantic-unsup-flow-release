@@ -1,0 +1,10 @@
+{
+    "base_configs": "kitti_base.json",
+    "loss": {
+        "w_smooth": 0
+     },
+    "model": {
+        "learned_upsampler": true,
+        "sem_enc_layers": 3
+    }
+}

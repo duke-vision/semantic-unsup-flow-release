@@ -1,0 +1,6 @@
+{
+    "base_configs": "kitti_base.json",
+    "model": {
+        "sem_enc_layers": 1
+    }
+}
