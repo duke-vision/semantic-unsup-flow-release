@@ -6,6 +6,21 @@ This repository contains the PyTorch implementation of our paper titled [**SemAR
 
 ![demo image](sem_aug_demo.png)
 
+[**Poster**](https://users.cs.duke.edu/~shuai/publications/yuan2023semarflow_poster.pdf) | [**Video**](https://youtu.be/XYBTolH2S8A)
+
+
+## Citation
+```
+@InProceedings{yuan2023semarflow,
+    author    = {Yuan, Shuai and Yu, Shuzhi and Kim, Hannah and Tomasi, Carlo},
+    title     = {SemARFlow: Injecting Semantics into Unsupervised Optical Flow Estimation for Autonomous Driving},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+    pages     = {9566-9577}
+}
+```
+
 ## Requirements
 
 ### Environment
