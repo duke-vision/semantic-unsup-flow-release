@@ -6,7 +6,7 @@ This repository contains the PyTorch implementation of our paper titled [**SemAR
 
 ![demo image](sem_aug_demo.png)
 
-[**Poster**](https://users.cs.duke.edu/~shuai/publications/yuan2023semarflow_poster.pdf) | [**Video**](https://youtu.be/XYBTolH2S8A)
+[**Poster**](https://users.cs.duke.edu/~shuai/publications/yuan2023semarflow_poster.pdf) | [**Video (YouTube)**](https://youtu.be/XYBTolH2S8A) | [**Video (Bilibili)**](https://www.bilibili.com/video/BV1yw411y7zK)
 
 
 ## Citation
